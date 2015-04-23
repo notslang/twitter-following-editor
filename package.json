@@ -1,0 +1,33 @@
+{
+  "name": "twitter-following-editor",
+  "description": "programmatically follow & unfollow people on Twitter w/out API access",
+  "version": "0.1.0",
+  "author": "Sean Lang <slang800@gmail.com>",
+  "bin": {
+    "twitter-following-editor": "./bin/index.js"
+  },
+  "dependencies": {
+    "JSONStream": "^0.10.0",
+    "argparse": "^0.1.16",
+    "jsdom": "^3.0.2",
+    "map-stream": "0.0.5",
+    "request-promise": "^0.3.3",
+    "tough-cookie": "^0.13.0",
+    "when": "^3.6.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "isstream": "^0.1.2",
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
+  },
+  "license": "GPLv3",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slang800/twitter-following-editor.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
