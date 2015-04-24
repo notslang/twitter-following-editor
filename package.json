@@ -1,7 +1,7 @@
 {
   "name": "twitter-following-editor",
   "description": "programmatically follow & unfollow people on Twitter w/out API access",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Sean Lang <slang800@gmail.com>",
   "bin": {
     "twitter-following-editor": "./bin/index.js"
