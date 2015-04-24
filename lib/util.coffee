@@ -49,7 +49,7 @@ class TwitterSession
           "USERNAME (#{@username}) or PASSWORD (#{@password}) is incorrect"
         )
       else
-        console.info('login done')
+        console.info 'login done'
         @_isLoggedIn = true
       return
     )
@@ -95,8 +95,17 @@ class TwitterSession
         form: formData
         jar: @cookieJar
       )
-    ).then( ->
-      console.info("#{action}ed #{username}")
+    ).then((res) ->
+      res = JSON.parse(res)
+      console.info "#{res['new_state']} #{res.user['screen_name']}"
+    ).catch((err) ->
+      if err.response.statusCode is 404
+        if userId?
+          console.info "userId \"#{userId}\" not found"
+        else
+          console.info "username \"#{username}\" not found"
+      else
+        throw new Error(err) # rethrow
     )
 
 module.exports = {TwitterSession}
